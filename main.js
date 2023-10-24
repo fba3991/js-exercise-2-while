@@ -22,22 +22,25 @@ let vittoriePc = 0;
 let vittorieG = 0;
 let gioco = 'si';
 alert('lancia il dado');
-while(gioco == 'si'){
+while (gioco === 'si') {
 
-  let dadoPc = Math.ceil (Math.random() * 6);
-  let dadoG = Math.ceil (Math.random() * 6);
-  alert(' giocatore: '  + dadoG + ' ' + ' pc: ' +dadoPc);
-  if(dadoG > dadoPc){
-    alert('hai vinto');
-    vittorieG++;
-}   
-else if  ( dadoG < dadoPc){
-alert('hai perso');
-vittoriePc++;
-} 
-else{
-  alert('pareggio')
-};
-alert('punteggio: ' + )
- 
+    let dadoPc = Math.ceil(Math.random() * 6);
+    let dadoG = Math.ceil(Math.random() * 6);
+    alert(' giocatore: ' + dadoG + ' ' + ' pc: ' + dadoPc);
+    if (dadoG > dadoPc) {
+        alert('hai vinto');
+        vittorieG++;
+    }
+    else if (dadoG < dadoPc) {
+        alert('hai perso');
+        vittoriePc++;
+    }
+    else {
+        alert('pareggio');
+    }
+    alert(' punteggio: tu = ' + vittorieG + ' pc = ' + vittoriePc);
+    let gioco = prompt('vuoi continuare a giocare?');
+    if (gioco != 'si') {
+        break;
+    }
 }
