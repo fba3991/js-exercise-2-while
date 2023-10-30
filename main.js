@@ -1,79 +1,65 @@
-/* let num = prompt('inserisci un numero da 1 a 10');
-let i  = 1;
-while( i <=10 ) {
- alert( num + 'x' + i + '=' + (num * i ));
- i++ ;
-} 
-  */
-/* let frase = prompt('scrivi una frase');
-let parola1 = prompt('inscerisci parola da sostituire');
-let parola2 = prompt('inscerisci sostituo');
-frase = frase.replace  (parola1, parola2);
-alert(frase); */
 
-/* let url = prompt('inserisci un url');
+/* let number = prompt('inserisci un numero da 1 a 10');
+let i = 1;
+while(i <=10){
+   alert(number + 'x' +i+ "="+(number*i));
+    i++
+} */
+
+/* let frase =prompt ('inserisci una frase');
+let parolaDaTrovare=prompt('inserisci una parola da trovare nella frase');
+let parolaDaSostituire=prompt('inserisci la parola con cui sostituire la parola trovata');
+frase = frase.replace (parolaDaTrovare, parolaDaSostituire);
+alert(frase);  */
+
+
+
+
+
+/*  let url = prompt('inserisci un url');
 if((url.startsWith ('http://' || 'https://')) && url.endsWith('.com')){
     alert('url valido');
 } else{
     alert('url non valido');
 } */
 
-/* let vittoriePc = 0;
-let vittorieG = 0;
-let gioco = 'si';
-alert('lancia il dado');
-while (gioco === 'si') {
 
-    let dadoPc = Math.ceil(Math.random() * 6);
-    let dadoG = Math.ceil(Math.random() * 6);
-    alert(' giocatore: ' + dadoG + ' ' + ' pc: ' + dadoPc);
-    if (dadoG > dadoPc) {
-        alert('hai vinto');
-        vittorieG++;
+let punteggioUtente = 0;
+let punteggioComputer = 0;
+while (true) {
+    // Lancia il dado per l'utente e il computer
+    const dadoUtente = Math.floor(Math.random() * 6) + 1;
+    const dadoComputer = Math.floor(Math.random() * 6) + 1;
+    let vincitore = "nessuno";
+    if (dadoUtente > dadoComputer) {
+        vincitore = "utente";
+        punteggioUtente++;
+    } else if (dadoComputer > dadoUtente) {
+        vincitore = "computer";
+        punteggioComputer++;
     }
-    else if (dadoG < dadoPc) {
-        alert('hai perso');
-        vittoriePc++;
-    }
-    else {
-        alert('pareggio');
-    }
-    alert(' punteggio: tu = ' + vittorieG + ' pc = ' + vittoriePc);
-    let gioco = prompt('vuoi continuare a giocare?');
-    if (gioco != 'si') {
-        break;
-    }
-} */
+    // Mostra risultato del round
+    alert("Utente ha lanciato: " + dadoUtente + "\nComputer ha lanciato: " + dadoComputer + "\nVincitore del round: " + vincitore +
+        "\nPunteggio: Utente - " + punteggioUtente + ", Computer - " + punteggioComputer);
+   
+}
 
-/* let vittoriePc = 0;
-let vittorieG = 0;
-let gioco = prompt('Vuoi giocare a dadi?')
 
-while (gioco == 'si'  gioco == 'Si'  gioco == 'SI') {
 
-    alert('Lancia il dado');
+/* 
+const maxNumber = parseInt(prompt("inserisci un numero massimo"));
+const randomNumber = Math.floor(Math.random()* maxNumber);
+let i = 0;
+while(true){
+    const guess =parseInt(prompt("indovina il numero tra 1 e " + maxNumber))
+    i++;
+    if(guess===randomNumber){
+        alert('Congratulazioni! Hai indovinato il numero ' + randomNumber + ' in ' + i + ' tentativi.');
+        break; 
+    }else if (guess > randomNumber){
+        alert('troppo alto!');
+    }else("troppo basso!")
 
-    let dadoPc = Math.ceil(Math.random() * 6);
-    let dadoG = Math.ceil(Math.random() * 6);
 
-    alert(' TU: ' + dadoG + '  PC: ' + dadoPc);
-
-    if (dadoG > dadoPc) {
-        alert('Hai Vinto');
-        vittorieG++;
-    }
-
-    else if (dadoG < dadoPc) {
-        alert('Hai Perso');
-        vittoriePc++;
-    }
-
-    else {
-        alert('Pareggio');
-    }
-
-    alert('Punteggio: TU = ' + vittorieG + '  PC = ' + vittoriePc);
-    gioco = prompt('Vuoi continuare a giocare?');
 
 } */
-
